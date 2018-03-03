@@ -1,0 +1,62 @@
+{
+  "name": "atom-perspectives",
+  "main": "./lib/atom-perspectives",
+  "version": "0.0.0",
+  "description": "Set up sets of active packages, easily switch from one to another.",
+  "keywords": [
+    "packages",
+    "configuration",
+    "atom"
+  ],
+  "activationCommands": {
+    "atom-workspace": "atom-perspectives:toggle"
+  },
+  "repository": "https://github.com/aflanagan/atom-perspectives",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "etch": "^0.12.8",
+    "immutable": "^3.8.2",
+    "log4js": "^2.5.3",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-jsx": "^2.0.0",
+    "babel-preset-env": "^1.6.1",
+    "standard": "^11.0.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": {
+      "jasmine": true,
+      "browser": true,
+      "node": true
+    },
+    "globals": [
+      "atom",
+      "waitsForPromise"
+    ],
+    "rules": {
+      "no-global-assign": "error"
+    }
+  },
+  "babel": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-jsx",
+      "transform-class-properties"
+    ]
+  }
+}
